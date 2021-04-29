@@ -1,0 +1,36 @@
+{
+    "exported_at": "2021-03-03T22:09:06+01:00",
+    "name": "JustWood",
+    "author": "emre.ulusoy@epita.fr",
+    "description": "Une plateforme pour host des serveurs Just Wood",
+    "features": null,
+    "images": [
+        "quay.io\/parkervcp\/pterodactyl-images:debian_dotnet"
+    ],
+    "file_denylist": "",
+    "startup": "dotnet {{SERVER_DLLFILE}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"Server has successfully started in\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/ash\r\n# JustWood Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napk update\r\napk add curl unzip\r\n\r\ncd \/tmp\r\ncurl -sSLO https:\/\/www.justwood-game.com\/JustWoodServer.zip\r\n \r\nunzip -o JustWoodServer.zip -d \/mnt\/server",
+            "container": "alpine:3.4",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Server DLL File",
+            "description": "The name of the Exefile to use when running Forge Mod.",
+            "env_variable": "SERVER_DLLFILE",
+            "default_value": "JustHood_SERVER.dll",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|regex:\/^([\\w\\d._-]+)(\\.dll)$\/"
+        }
+    ]
+}

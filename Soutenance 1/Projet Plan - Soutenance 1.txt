@@ -1,0 +1,34 @@
+Projet-plan 
+
+
+Présentation générale du projet:
+
+	
+En quoi consiste le jeu? 
+	Imprécisions et changement au niveau du cahier de charges (Spawn-points, château, asiatique)
+ 
+
+Réalisation:
+
+	
+Réseau
+	Déplacements et animations
+	Intérface
+	Projets et plans pour la prochaine soutenance
+ 
+
+Présentation des tâches individuelles:
+
+	
+Démonstration du réseau. 
+	Intérface
+	Animations 
+	
+	Minimap et spawns
+	Map 
+
+ 
+
+Conclusion:
+
+ 
